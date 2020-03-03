@@ -234,6 +234,10 @@ void List<T>::reverse(ListNode *& startPoint, ListNode *& endPoint) {
     if(startPoint == endPoint){
       return;
     }
+    if(startPoint == NULL && endPoint == NULL){
+      return;
+    }
+
     ListNode * left_end = startPoint->prev;
     ListNode * right_end = endPoint->next;
     ListNode * temp = startPoint;
@@ -276,10 +280,17 @@ void List<T>::reverseNth(int n) {
   if(n <= 1 || length_ <= 1){
     return;
   }
+  if(n >= length_){
+    reverse();
+    return;
+  }
+  if(head_ == NULL){
+    return;
+  }
   ListNode * startptr = head_;
   ListNode * endptr = head_;
   while(startptr != NULL){
-      for(int i = 1; i < n; i++){
+      for(int i = 0; i < n-1; i++){
          if(endptr->next !=NULL){
          endptr = endptr->next;
           }else{
