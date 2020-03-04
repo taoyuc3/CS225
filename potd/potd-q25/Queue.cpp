@@ -23,7 +23,7 @@ void Queue::enqueue(int value) {
 // `int dequeue()` - removes an item off the queue and returns the value in O(1) time
 int Queue::dequeue() {
   int ans = myQueue.front();
-  myQueue.pop_front();
+  myQueue.pop_back();
   --mySize;
   return ans;
 }
