@@ -22,8 +22,23 @@ using namespace cs225;
  * @param tolerance If the current point is too different (difference larger than tolerance) with the start point,
  * it will not be included in this BFS
  */
-BFS::BFS(const PNG & png, const Point & start, double tolerance) {  
+BFS::BFS(const PNG & png, const Point & start, double tolerance) {
   /** @todo [Part 1] */
+  png1 = png;
+  start1 = start;
+  tolerance1 = tolerance;
+  //create a 2D array to mark each pixel
+  bool **already = new bool *[png1.width()];
+  for(unsigned i = 0; i < png1.width(); ++i){
+    already[i] = new bool[png1.height()];
+  }
+  //traverse with false
+  for(unsigned i = 0; i < png1.width(); i++){
+    for(unsigned j = 0; j < png1.height(); j++){
+      already[i][j] = false;
+    }
+  }
+  mylist.push_back(start1);
 }
 
 /**
@@ -47,6 +62,7 @@ ImageTraversal::Iterator BFS::end() {
  */
 void BFS::add(const Point & point) {
   /** @todo [Part 1] */
+  mylist.push_back(point);
 }
 
 /**
@@ -54,7 +70,12 @@ void BFS::add(const Point & point) {
  */
 Point BFS::pop() {
   /** @todo [Part 1] */
-  return Point(0, 0);
+  if(mylist.empty() == true){
+    return Point(-1, -1);
+  }
+  Point mylisthead = mylist.front();
+  mylist.pop_front();
+  return mylisthead;
 }
 
 /**
@@ -62,7 +83,11 @@ Point BFS::pop() {
  */
 Point BFS::peek() const {
   /** @todo [Part 1] */
-  return Point(0, 0);
+  if(mylist.empty() == true){
+    return Point(-1,-1);
+  }else{
+    return mylist.front();
+  }
 }
 
 /**
@@ -70,5 +95,5 @@ Point BFS::peek() const {
  */
 bool BFS::empty() const {
   /** @todo [Part 1] */
-  return true;
+  return mylist.empty();
 }
