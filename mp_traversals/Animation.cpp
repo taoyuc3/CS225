@@ -5,11 +5,11 @@
  *
  * @author Wade Fagen-Ulmschneider
  * @date Fall 2017
- *  
+ *
  * @author Jack Toole
  * @date Fall 2011
  */
-
+ 
 #include <stdlib.h>
 #include <sys/stat.h>
 #include <iostream>

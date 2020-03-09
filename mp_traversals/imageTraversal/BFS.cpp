@@ -85,9 +85,8 @@ Point BFS::peek() const {
   /** @todo [Part 1] */
   if(mylist.empty() == true){
     return Point(-1,-1);
-  }else{
-    return mylist.front();
   }
+    return mylist.front();
 }
 
 /**

@@ -39,6 +39,4 @@ private:
   Point start1;
   double tolerance1;
   std::list<Point>mylist;
-
-
 };

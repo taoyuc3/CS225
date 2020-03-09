@@ -16,14 +16,29 @@
 /**
  * Initializes a depth-first ImageTraversal on a given `png` image,
  * starting at `start`, and with a given `tolerance`.
- * 
+ *
  * @param png The image this DFS is going to traverse
  * @param start The start point of this DFS
  * @param tolerance If the current point is too different (difference larger than tolerance) with the start point,
  * it will not be included in this DFS
  */
-DFS::DFS(const PNG & png, const Point & start, double tolerance) {  
+DFS::DFS(const PNG & png, const Point & start, double tolerance) {
   /** @todo [Part 1] */
+  png1 = png;
+  start1 = start;
+  tolerance1 = tolerance;
+  //create a 2D array to mark each pixel
+  bool **already = new bool *[png1.width()];
+  for(unsigned i = 0; i < png1.width(); ++i){
+    already[i] = new bool[png1.height()];
+  }
+  //traverse with false
+  for(unsigned i = 0; i < png1.width(); i++){
+    for(unsigned j = 0; j < png1.height(); j++){
+      already[i][j] = false;
+    }
+  }
+  mylist.push_back(start1); //push at the back, even the start point
 }
 
 /**
@@ -47,6 +62,7 @@ ImageTraversal::Iterator DFS::end() {
  */
 void DFS::add(const Point & point) {
   /** @todo [Part 1] */
+  mylist.push_back(point); //push at the back
 }
 
 /**
@@ -54,7 +70,12 @@ void DFS::add(const Point & point) {
  */
 Point DFS::pop() {
   /** @todo [Part 1] */
-  return Point(0, 0);
+  if(mylist.empty() == true){
+    return Point(-1,-1);
+  }
+  Point mylisthead = mylist.back(); //pop at the back
+  mylist.pop_back();
+  return mylisthead;
 }
 
 /**
@@ -62,7 +83,10 @@ Point DFS::pop() {
  */
 Point DFS::peek() const {
   /** @todo [Part 1] */
-  return Point(0, 0);
+  if(mylist.empty() == true){
+    return Point(-1,-1);
+  }
+  return mylist.back(); //peek at the back
 }
 
 /**
@@ -70,5 +94,5 @@ Point DFS::peek() const {
  */
 bool DFS::empty() const {
   /** @todo [Part 1] */
-  return true;
+  return mylist.empty();
 }
