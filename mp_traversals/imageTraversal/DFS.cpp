@@ -28,7 +28,7 @@ DFS::DFS(const PNG & png, const Point & start, double tolerance) {
   start1 = start;
   tolerance1 = tolerance;
   //create a 2D array to mark each pixel
-  bool **already = new bool *[png1.width()];
+  already = new bool *[png1.width()];
   for(unsigned i = 0; i < png1.width(); ++i){
     already[i] = new bool[png1.height()];
   }
@@ -38,7 +38,7 @@ DFS::DFS(const PNG & png, const Point & start, double tolerance) {
       already[i][j] = false;
     }
   }
-  mylist.push_back(start1); //push at the back, even the start point
+  mylist.push_back(start1);
 }
 
 /**
@@ -46,7 +46,10 @@ DFS::DFS(const PNG & png, const Point & start, double tolerance) {
  */
 ImageTraversal::Iterator DFS::begin() {
   /** @todo [Part 1] */
-  return ImageTraversal::Iterator();
+  ImageTraversal * dfs = new DFS(png1, start1, tolerance1);
+  ImageTraversal::Iterator it(dfs, start1);
+  return it;
+  // return ImageTraversal::Iterator();
 }
 
 /**

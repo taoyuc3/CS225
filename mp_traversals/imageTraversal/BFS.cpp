@@ -22,13 +22,14 @@ using namespace cs225;
  * @param tolerance If the current point is too different (difference larger than tolerance) with the start point,
  * it will not be included in this BFS
  */
+
 BFS::BFS(const PNG & png, const Point & start, double tolerance) {
   /** @todo [Part 1] */
   png1 = png;
   start1 = start;
   tolerance1 = tolerance;
   //create a 2D array to mark each pixel
-  bool **already = new bool *[png1.width()];
+  already = new bool *[png1.width()];
   for(unsigned i = 0; i < png1.width(); ++i){
     already[i] = new bool[png1.height()];
   }
@@ -46,7 +47,10 @@ BFS::BFS(const PNG & png, const Point & start, double tolerance) {
  */
 ImageTraversal::Iterator BFS::begin() {
   /** @todo [Part 1] */
-  return ImageTraversal::Iterator();
+  ImageTraversal * dfs = new BFS(png1, start1, tolerance1);
+  ImageTraversal::Iterator it(dfs, start1);
+  return it;
+  // return ImageTraversal::Iterator();
 }
 
 /**

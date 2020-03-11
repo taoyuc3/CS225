@@ -1,7 +1,7 @@
 /**
  * @file DFS.h
  */
- 
+
 #pragma once
 
 #include <iterator>
@@ -35,8 +35,4 @@ public:
 private:
 	/** @todo [Part 1] */
 	/** add private members here*/
-  PNG png1;
-  Point start1;
-  double tolerance1;
-  std::list<Point>mylist;
 };

@@ -31,7 +31,7 @@ TEST_CASE("DFS maintains a depth-first ordering", "[weight=0][part=1][part=1a]")
   PNG png(40, 40);
   Point startPoint(20, 20);
   DFS dfs(png, startPoint, 0.2);
-  
+
   dfs.add( Point(2, 2) );
   dfs.add( Point(2, 3) );
   dfs.add( Point(2, 4) );
