@@ -1,9 +1,9 @@
 #include "TreeNode.h"
 #include <algorithm>
 #include <queue>
+
 TreeNode* findLastUnbalanced(TreeNode* root) {
   // your code here
-
   std::queue<TreeNode*> myqueue;
   TreeNode * temp = root;
   TreeNode * findnode = NULL;
@@ -11,12 +11,13 @@ TreeNode* findLastUnbalanced(TreeNode* root) {
     if(!balance(temp)){
       findnode = temp;
     }
+    //traverse in level order
     myqueue.push(temp->left_);
     myqueue.push(temp->right_);
     temp = myqueue.front();
     myqueue.pop();
   }
-  return findnode;
+    return findnode;
 }
 
 int getheight(TreeNode * root){
