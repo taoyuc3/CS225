@@ -10,7 +10,7 @@ BTreeNode* find(BTreeNode* root, int key) {
     }
   }
 
-   BTreeNode* node = NULL;
+  BTreeNode* node = NULL;
   for(unsigned j = 0; j < root->children_.size(); j++){
     node = find(root->children_[j], key);
     if(node != NULL){

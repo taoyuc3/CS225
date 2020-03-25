@@ -14,4 +14,4 @@ struct BTreeNode {
     }
 };
 
-BTreeNode* find(BTreeNode* root, int key);
+std::vector<int> traverse(BTreeNode* root);

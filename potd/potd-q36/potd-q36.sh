@@ -6,18 +6,18 @@ if test "n" = n; then
     umask 077
 fi
 
-CRCsum="2092338095"
-MD5="04b158d7cab7b0373fe326b146ce1b73"
+CRCsum="1762421362"
+MD5="b9d5888785fb2c7d4398fdec481d1267"
 TMPROOT=${TMPDIR:=/tmp}
 USER_PWD="$PWD"; export USER_PWD
 
-label="Extracting potd-q35"
+label="Extracting potd-q36"
 script="echo"
-scriptargs="The initial files can be found in the newly created directory: potd-q35"
+scriptargs="The initial files can be found in the newly created directory: potd-q36"
 licensetxt=""
 helpheader=''
-targetdir="potd-q35"
-filesizes="962"
+targetdir="potd-q36"
+filesizes="812"
 keep="y"
 nooverwrite="n"
 quiet="n"
@@ -244,15 +244,15 @@ do
 	echo Target directory: "$targetdir"
 	echo Uncompressed size: 20 KB
 	echo Compression: gzip
-	echo Date of packaging: Tue Mar  5 17:51:53 CST 2019
+	echo Date of packaging: Tue Mar  5 17:53:52 CST 2019
 	echo Built with Makeself version 2.3.0 on linux-gnu
 	echo Build command was: "./makeself/makeself.sh \\
     \"--notemp\" \\
-    \"../../questions/potd3_035_BTree_find/potd-q35\" \\
-    \"../../questions/potd3_035_BTree_find/clientFilesQuestion/potd-q35.sh\" \\
-    \"Extracting potd-q35\" \\
+    \"../../questions/potd3_036_BTree_Inorder_Traversal/potd-q36\" \\
+    \"../../questions/potd3_036_BTree_Inorder_Traversal/clientFilesQuestion/potd-q36.sh\" \\
+    \"Extracting potd-q36\" \\
     \"echo\" \\
-    \"The initial files can be found in the newly created directory: potd-q35\""
+    \"The initial files can be found in the newly created directory: potd-q36\""
 	if test x"$script" != x; then
 	    echo Script run after extraction:
 	    echo "    " $script $scriptargs
@@ -274,7 +274,7 @@ do
 	echo LABEL=\"$label\"
 	echo SCRIPT=\"$script\"
 	echo SCRIPTARGS=\"$scriptargs\"
-	echo archdirname=\"potd-q35\"
+	echo archdirname=\"potd-q36\"
 	echo KEEP=y
 	echo NOOVERWRITE=n
 	echo COMPRESS=gzip
@@ -530,8 +530,7 @@ if test x"$keep" = xn; then
     /bin/rm -rf $tmpdir
 fi
 eval $finish; exit $res
-‹     íWYoÛFÖköWL# -“^^’¡+ub7m 8mE+0ÔR"LqBAÿ=³¤Ú–í(UØïAZî|;wggh7jE´]Wü›m—Vÿ×h˜¶cµÚ¦å¶5©Ûn5Àmìyšy	@#ˆò øz?ï1ù…qüúÏ„±>fÆ´Æýo9Î½ûïRKì¿ÝnQ·eâ9ÁcàZ rÿkÇ‹ëÄ›Ì<à±ÏyÆ~”ôÒ,	ãÉ 2ãEž„ÙtVœ3?ãÉ€äç~›ÃˆÏœG¦£ˆyÁ¨Ö-æÓlÜé”‹{aœ€ElÆâ,Ý•otÀŸ†Ñ8añŠ¶©,–7§@½cd®­ÜÈ¦aª6V¡óRå’,»„lmBÆcµòœpžêƒ+öUë’§žÿï½+„«÷þ8ÿ[÷¿eÙ®Ìÿ}àüòüâôý9žÿ™ÆäÃëw¬Æßæ’Á	ysy‰?òâI³)ž~ž¾dó¬ï7›ôè>èÐ?PÐ?zQ„¿ìK–xdxVY:<»»’¤wà@]ù£²‹yá˜Fž¨Ã3þ1(Ôh s8ø…ÒçNé»}-Èè%²{PŒJz%·{ûðÐï¯¸CžéÉô ñÝT\}Úù¿~_ÿ[þ[-‡ÞÍ*ó/õSÊCŽ5œy7ÊûÏv›)¥ÒU*¢;ÀJ\*ŸÇs–d·KjYš«ÄoEU9@œ~ÿâ¯áPƒ„eyC*dO°Ò‡ßØ(ƒ°O»öµRÛ!U5”4›ZÙ]@³_šÊø¨´¦ÞZôwøMP p`kpIˆ(ý"iÔŠË7º6=‚]vwH-X˜(µ„tçrÜÝËX´Qz‚RRívâUç¦v„K[ÅÀVçv1pÔ¹£	>²ŒMe\çétôÙó¯Ô—¸J+üy€a?¦¢´±â¬»>ÜÅÀ‹RvÃÝCðâbûðOD…
-00Ó¤…–êIx‘¦
-öó>ˆSð
-”O,…Ž¿ÇP¼„ÒQ.¸ÊVƒÏóz=P
-eï&Lt >zi©U	JÁgñ8ÂqiëÓŠ–µBOÁ­P7Ã.¶;â9)ÃùC8©%‚˜µ`î/ »– ìÚX]6´¸löùý_WðXÿo¶[·ê¿mš²ÿßsý_ñûjø¯>²áÏx#òê7–°íÙ¹'ŽwCBBBBBBBBBBBBBBBBBB¢F|'ÄT (  
+‹     íWYo›@æ5û+¦©Õ@0§©°c5iÒJ•“<´RóT‹àÅFÁ¬µJdù¿wÁ˜Ø‰Uvei¿˜‹eŽUZÂÖ¡2Ø–•ß5ÛRë÷%Í0õ¶­é–m
+ª¦Zv[ KØÒ8q)€à‡©ï?¾®·I¾§PZç¿(Æ×dˆ•ñ÷¿mš¯î¿¥ùþv›í»m³ý×­¶)€Ê÷ëø8¥îhâ‰<ŒÐÇ òÂtˆ¡'4ˆF½ÇG„ÉxRgfØKí!ÄôS/êg‚†;BBâAˆ]pÊtp§àÇÉÐqÆÝ Jz€C<ÁQVå•Ïãxã R•j•H”`6Îqå!™T†ŒƒXîUO…SÈ.çhÞÉ_ç…iBÝÓ‹OÑ %$‘:hÏóÿÊ½Ç~âíÖÿ·óß|QÿuÝ°xþï—·—×gW—ìÿŸ¸A„nÎü,i…<å’Búz{Ë$^èF£f3_}ëŸ}Ï•e–,§^³©>€ì<ùFù·†ìŠXæ þEÍ´±j‰Sw !–ñH=Ñ9?LB±!AãäDáF™@ãB‹˜EìÞtš+³(™v
+j¡ŽPí­œÚ+¾eâ±ú9è@¦}8fß¦ê~çÿò{ý·ü×4£½’ÿºÍó'ý¿jåa=»ÏÚû;§€ŠsX*b´HKqÑWû²3C=¶:ï¬‘ê0Ó˜TÏ¥kÍ˜™LÁZonÂÌfÒÏLŠêóA4PÅL“N¡‹™^†˜aŠ™)åúLK©¦ešÆãÁëÝ‹Ÿ˜•TÄó††±ÉÅâ¥ÎrNb•ÑwÃ¸•Ö"L\M#Ì…Z¸ð	]xÇ#Qœ‚S—1!(l•;<Ê7£ÃÖ
+Ž†ù²Ù¤r>ª†0¤	t»pä×#8ª¢ZJŠó²¹	€â$¥¨4GHàØ£óß¶šÀ¦ùO×_ÖCÓ4^ÿw[ÿ7ñwœ‰ÊSV«$¥àåÕvŒ)^ô+^eáÈòÂÁó’ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒã_ñ8û/° (  
