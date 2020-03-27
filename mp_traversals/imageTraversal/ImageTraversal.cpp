@@ -95,13 +95,9 @@ ImageTraversal::Iterator & ImageTraversal::Iterator::operator++() {
   traverse_data->already[curr_point.x][curr_point.y] = true;
   curr_point = traverse_data->peek();
 
-  while(traverse_data->mylist.empty() == false){
-    if(traverse_data->already[curr_point.x][curr_point.y] == false){
-      break;
-    }else{
-      Point pop_pixel = traverse_data->pop();
+  while(traverse_data->mylist.empty() == false && traverse_data->already[curr_point.x][curr_point.y]){
+      traverse_data->pop();
       curr_point = traverse_data->peek();
-    }
   }
 
   return *this;
@@ -114,8 +110,7 @@ ImageTraversal::Iterator & ImageTraversal::Iterator::operator++() {
  */
 Point ImageTraversal::Iterator::operator*(){
   /** @todo [Part 1] */
-  //return Point(0,0);
-  return this->curr_point;
+  return curr_point;
 }
 
 /**
@@ -125,7 +120,7 @@ Point ImageTraversal::Iterator::operator*(){
  */
 bool ImageTraversal::Iterator::operator!=(const ImageTraversal::Iterator &other) {
   /** @todo [Part 1] */
-  //return false;
+  // return false;
   if(this->curr_point == other.curr_point){
     return false;
   }
