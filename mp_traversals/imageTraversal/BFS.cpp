@@ -40,6 +40,8 @@ BFS::BFS(const PNG & png, const Point & start, double tolerance) {
     }
   }
   mylist.push_back(start1);
+  // delete *already;
+  // *already = NULL;
 }
 
 /**
@@ -50,6 +52,7 @@ ImageTraversal::Iterator BFS::begin() {
   ImageTraversal * dfs = new BFS(png1, start1, tolerance1);
   ImageTraversal::Iterator it(dfs, start1);
   return it;
+  // return ImageTraversal::Iterator(this);
   // return ImageTraversal::Iterator();
 }
 

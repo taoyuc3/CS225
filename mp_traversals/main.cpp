@@ -27,7 +27,7 @@ int main() {
   FloodFilledImage image(png);
 
 
-  BFS bfs1(png, Point(10,10), 0.5);
+  BFS bfs1(png, Point(10,10), 0.2);
   image.addFloodFill(bfs1, color_);
 
   // Animation animation = image.animate(1000);
@@ -38,21 +38,23 @@ int main() {
   BFS bfs3(png, Point(249,382), 0.5);
   image.addFloodFill(bfs3, color_);
   //
-  BFS bfs4(png, Point(190,50), 0.5);
+  BFS bfs4(png, Point(30,30), 0.5);
   image.addFloodFill(bfs4, color_);
 
-  BFS bfs5(png, Point(50,10), 0.5);
-  image.addFloodFill(bfs5, color_);
+  // BFS bfs5(png, Point(50,100), 0.5);
+  // image.addFloodFill(bfs5, color_);
 
-  BFS bfs6(png, Point(150,150), 0.05);
-  image.addFloodFill(bfs6, color_);
+  // BFS bfs6(png, Point(150,150), 0.05);
+  // image.addFloodFill(bfs6, color_);
 
 
-  // DFS dfs(png, Point(200,200), 0.5);
-  // image.addFloodFill(dfs, color_);
+  DFS dfs(png, Point(200,150), 0.5);
+  image.addFloodFill(dfs, color_);
+  //
+  // DFS dfs2(png, Point(200,50), 0.2);
+  // image.addFloodFill(dfs2, color_);
 
   Animation animation = image.animate(1000);
-
 
 
   PNG lastFrame = animation.getFrame( animation.frameCount() - 1 );

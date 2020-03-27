@@ -50,6 +50,8 @@ ImageTraversal::Iterator::Iterator(ImageTraversal * traversal, Point point){
  */
 ImageTraversal::Iterator & ImageTraversal::Iterator::operator++() {
   /** @todo [Part 1] */
+  // check out four potential directions
+
   curr_point = traverse_data->pop();
 
   if(curr_point.x + 1 < traverse_data->png1.width() &&
