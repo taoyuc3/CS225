@@ -1,4 +1,3 @@
-## taoyuc3
 ## CS 225: Data Structures Assignment Repository
 ## Spring 2020
 ## 91-DIVOC LLEH OT OG
