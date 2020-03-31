@@ -1,7 +1,5 @@
 #include "Hash.h"
 #include <string>
-// #include <bits/stdc++.h>
-
 
 unsigned long bernstein(std::string str, int M)
 {
@@ -16,15 +14,15 @@ unsigned long bernstein(std::string str, int M)
 
 std::string reverse(std::string str)
 {
-    // std::string output = "";
+  // std::string output = "";
 	std::string output = str;
-		// Your code here
+	// Your code here
 	int size = output.size();
 	for(int i = 0; i < (size/2); i++){
-			int temp = output[size-1-i];
-			output[size-1-i] = output[i];
-			output[i] = temp;
-		}
+		int temp = output[size-1-i];
+		output[size-1-i] = output[i];
+		output[i] = temp;
+	}
 	return output;
 }
 
