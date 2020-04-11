@@ -26,19 +26,19 @@ MosaicCanvas* mapTiles(SourceImage const& theSource,
     map<Point<3>, TileImage*> mytileMap;
 
     for(TileImage & tile: theTiles){
-      LUVAPixel myPixel = tile.getAverageColor();
-      Point<3> xyz = convertToXYZ(myPixel);
-      myPoints.push_back(xyz);
-      mytileMap[xyz] = &tile;
+        LUVAPixel myPixel = tile.getAverageColor();
+        Point<3> xyz = convertToXYZ(myPixel);
+        myPoints.push_back(xyz);
+        mytileMap[xyz] = &tile;
     }
 
     KDTree<3> * tree = new KDTree<3>(myPoints);
     for(int i = 0; i < theSource.getRows(); i++){
       for(int j = 0; j < theSource.getColumns(); j++){
-        LUVAPixel color = theSource.getRegionColor(i, j);
-        Point<3> xyz = convertToXYZ(color);
-        Point<3> nearest = tree->findNearestNeighbor(xyz);
-        myCanvas->setTile(i, j, mytileMap[nearest]);
+          LUVAPixel color = theSource.getRegionColor(i, j);
+          Point<3> xyz = convertToXYZ(color);
+          Point<3> nearest = tree->findNearestNeighbor(xyz);
+          myCanvas->setTile(i, j, mytileMap[nearest]);
       }
     }
     delete tree;
