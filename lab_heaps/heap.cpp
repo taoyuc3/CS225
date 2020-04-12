@@ -144,8 +144,8 @@ void heap<T, Compare>::updateElem(const size_t & idx, const T& elem)
     // @TODO In-place updates the value stored in the heap array at idx
     // Corrects the heap to remain as a valid heap even after update
     _elems[idx] = elem;
-    heapifyDown(idx);
     heapifyUp(idx);
+    heapifyDown(idx);
 }
 
 
@@ -153,7 +153,7 @@ template <class T, class Compare>
 bool heap<T, Compare>::empty() const
 {
     // @TODO Determine if the heap is empty
-    return _elems.size() == 0;
+    return _elems.size() <= 1;
 }
 
 template <class T, class Compare>
